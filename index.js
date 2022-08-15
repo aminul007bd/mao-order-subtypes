@@ -1,6 +1,14 @@
 const express = require("express");
 
 const app = express();
+const orderSubTypes = [
+  "Retail",
+  "Phone",
+  "Mobile",
+  "Web",
+  "Exchange",
+  "DropShip",
+];
 const subtypes = {
   data: [
     {
@@ -31,6 +39,9 @@ const subtypes = {
 };
 app.get("/order/subtypes", (req, res, next) => {
   res.json(subtypes);
+});
+app.get("/orders", (req, res, next) => {
+  res.json(orderSubTypes);
 });
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
