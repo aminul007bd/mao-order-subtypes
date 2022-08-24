@@ -1,3 +1,4 @@
+// this subtypes can change
 const orderSubTypes = {
   Retail: "Retail",
   Phone: "Phone",
